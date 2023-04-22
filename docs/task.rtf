@@ -1,0 +1,108 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c13333\c13333\c13333;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33200\viewh20460\viewkind0
+\deftab720
+\pard\pardeftab720\li286\fi-287\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Opis problema za rje\'9aavanje:
+\f1 \
+
+\f0 Banka izdaje fizi\uc0\u269 kim osobama kreditne kartice. \
+Osobe za to apliciraju banci. \
+Za potrebe te evidencije treba napraviti mini-aplikaciju kojom \uc0\u263 e se evidentirati osoba(O) ili vi\'9ae njih predstavljenih Imenom, Prezimenom, OIB-om i Statusom za koje se treba izraditi kartica. \
+Tip kartice nije bitan, ve\uc0\u263  je samo jedan, tako da o tome ne treba\'9a razmi\'9aljati.
+\f1 \
+
+\f0 Osobe se moraju zapisati permanentno,\'a0 a na\uc0\u269 in izaberi sam po volji. Preferira se baza podataka (bilo koja, mo\'9ee i H2) ili datoteka.
+\f1 \
+
+\f0 \'a0
+\f1 \
+
+\f0 Kako bi proces za proizvodnju/tiskanje kreditnih kartica znao \uc0\u269 iju/koju karticu napraviti, treba mu dati tekstualnu datoteku(D) sa strukturom:
+\f1 \
+
+\f0 Ime, Prezime, OIB, Status(delimiter izaberi sam, ne treba header).
+\f1 \
+
+\f0 Napomena: Proces proizvodnje kartica ovdje je zami\'9aljen da bi dao neki smisao, ali njime se ne\uc0\u263 e\'9a baviti, nego samo a\'9euriranjem osoba i generiranjem tekstualne datoteke koju bi zami\'9aljeni proces trebao \u269 itati.
+\f1 \
+
+\f0 \'a0
+\f1 \
+
+\f0 Aplikacija treba omogu\uc0\u263 iti:
+\f1 \
+
+\f0 \'a0
+\f1 \
+
+\f0 - Upisivanje osobe(O) u skup osoba sa svim pripadaju\uc0\u263 im atributima(Ime, Prezime, OIB, Status),
+\f1 \
+
+\f0 - Pretra\'9eivanje skupa osoba(O) prema OIBu(ru\uc0\u269 ni upis korisnika) osobe za koju \'9eelimo generirati datoteku(D), i ako osoba(O) postoji, vratiti Ime, Prezime, OIB i Status za istu; Ina\u269 e ne vrati ni\'9ata, a mo\'9ee biti i neki exception da se zna \'9ato se desilo.
+\f1 \
+
+\f0 - Za prona\uc0\u273 enu osobu(O) treba napraviti tekstualnu datoteku (D) sa svim popunjenim atributima(Ime, Prezime, OIB, Status).
+\f1 \
+
+\f0 \'a0
+\f1 \
+
+\f0 Jedna datoteka(D) treba sadr\'9eavati podatke samo za jednu osobu(O).
+\f1 \
+
+\f0 U nazivu datoteke mo\'9ee\'9a koristiti OIB + timestamp, radi lak\'9ae provjere da li datoteka ve\uc0\u263  postoji.
+\f1 \
+
+\f0 Lokacija spremanja datoteke nije bitna, mo\'9ee i u working direktorij aplikacije.
+\f1 \
+
+\f0 Osoba(O) se treba mo\uc0\u263 i obrisati na zahtjev prema OIBu(ru\u269 ni upis korisnika).
+\f1 \
+
+\f0 \'a0
+\f1 \
+
+\f0 Metode treba napraviti da rade kao RESTfull.
+\f1 \
+
+\f0 Bonus Feature I:\'a0\'a0\'a0 Probaj se poigrati sa poljima Status (tip polja izaberi sam) u osobi(O) i/ili datoteci (D) imaju\uc0\u263 i na umu da se podr\'9ei sljede\u263 e:
+\f1 \
+
+\f0 \'95\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Jedna osoba(O) mo\'9ee imati samo jednu aktivnu datoteku(D)
+\f1 \
+
+\f0 \'95\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Ako obri\'9ae\'9a osobu(O),\'a0 datoteka treba biti ozna\uc0\u269 ena kao neaktivna
+\f1 \
+
+\f0 \'a0
+\f1 \
+
+\f0 Ne mora\'9a raditi FrontEnd.
+\f1 \
+
+\f0 Dovoljan je interface HTTP ili konzola, ili kako ve\uc0\u263  odlu\u269 i\'9a.
+\f1 \
+
+\f0 Jezik je JAVA, a po\'9eeljno je kori\'9atenje frameworka, tipa spring boot i sl.
+\f1 \
+
+\f0 \'a0
+\f1 \
+
+\f0 \'8atogod jo\'9a misli\'9a da bi trebalo napraviti kao dodanu vrijednost, slobodno napravi ako ima\'9a vremena, samo mi onda to napi\'9ai u mailu kad zavr\'9ai\'9a, da mo\'9eemo pogledati.
+\f1 \
+
+\f0 Kad si gotov, mo\'9ee\'9a to na public GIT zakva\uc0\u269 it pa po\'9aalji link.
+\f1 \
+
+\f0 Pitaj \'9atogod treba/nije jasno.
+\f1 \
+
+\f0 Javi kad bi mogao poslati rje\'9aenje.
+\f1 \
+}
